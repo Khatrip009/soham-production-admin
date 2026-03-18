@@ -1,0 +1,208 @@
+/* =========================
+   LOGIN PAGE – TWO‑PANEL LAYOUT
+   Nunito font from global fonts.css
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fa;
+  font-family: "Nunito", sans-serif;
+  padding: 1rem;
+}
+
+.login-container {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  height: 600px;
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* ---------- LEFT PANEL (VIDEO) ---------- */
+.login-left {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #1a1a2e; /* fallback */
+}
+
+.panel-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(200, 159, 114, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 1;
+}
+
+.left-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.left-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.left-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- RIGHT PANEL (FORM) ---------- */
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 2rem;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c89f72;
+  margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #c89f72;
+  box-shadow: 0 0 0 3px rgba(200, 159, 114, 0.2);
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #c89f72;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 0.9rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+  background: #b88a5a;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toggle-mode {
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+}
+
+.toggle-mode button {
+  background: none;
+  border: none;
+  color: #c89f72;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-size: inherit;
+}
+
+.toggle-mode button:hover {
+  text-decoration: underline;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+    max-width: 500px;
+  }
+
+  .login-left {
+    height: 250px;
+  }
+
+  .left-title {
+    font-size: 2rem;
+  }
+
+  .left-subtitle {
+    font-size: 1rem;
+  }
+
+  .login-right {
+    padding: 2rem 1.5rem;
+  }
+}

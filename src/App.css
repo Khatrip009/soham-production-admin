@@ -1,0 +1,135 @@
+/* ---------------- GLOBAL ---------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: #f5f0eb;
+  color: #2c2c2c;
+}
+
+/* ---------------- LINKS ---------------- */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------------- SCROLLBAR (PREMIUM TOUCH) ---------------- */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 160, 120, 0.4);
+  border-radius: 10px;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* ---------------- NAV LINKS ---------------- */
+
+.nav-link {
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  border-color: #c89f72;
+  color: #b38b5f;
+}
+
+/* ---------------- LOGOUT BUTTON ---------------- */
+
+.logout-btn {
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(200, 160, 120, 0.4);
+}
+
+/* ---------------- INPUTS ---------------- */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  outline: none;
+  border: 1px solid rgba(200, 160, 120, 0.3);
+  border-radius: 8px;
+  padding: 8px 10px;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #c89f72;
+  box-shadow: 0 0 0 2px rgba(200, 160, 120, 0.2);
+}
+
+/* ---------------- CARD (COMMON UI) ---------------- */
+
+.card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------------- HEADINGS ---------------- */
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+/* ---------------- UTILITY CLASSES ---------------- */
+
+.flex {
+  display: flex;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+}

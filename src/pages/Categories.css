@@ -1,0 +1,31 @@
+/* =========================
+   CATEGORIES PAGE STYLES
+   (Inherits from Products.css)
+========================= */
+
+.categories {
+  padding: 2rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: "Nunito", sans-serif;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.categories-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c89f72;
+  margin: 0;
+}
+
+/* Reuse all other styles from Products.css */
+/* If you want to keep them separate, copy the relevant parts from Products.css */
+/* But easiest: import Products.css in this component's JS */

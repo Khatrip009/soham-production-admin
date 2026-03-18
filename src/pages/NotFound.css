@@ -1,0 +1,119 @@
+/* =========================
+   NOT FOUND PAGE STYLES
+   (Nunito font from global fonts.css)
+========================= */
+
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-main);
+  font-family: "Nunito", sans-serif;
+  padding: 1.5rem;
+}
+
+.not-found-card {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 32px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.not-found-icon {
+  font-size: 5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.not-found-code {
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 10px rgba(200, 159, 114, 0.3);
+}
+
+.not-found-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.not-found-message {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.not-found-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  background: var(--primary);
+  color: #333; /* Changed from white to dark for better contrast */
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(200, 159, 114, 0.3);
+}
+
+.not-found-btn:hover {
+  background: var(--primary-dark);
+  color: #1a1a1a; /* Slightly darker on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 159, 114, 0.4);
+}
+
+.not-found-btn:active {
+  transform: translateY(0);
+}
+
+.not-found-logo img {
+  max-width: 120px;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .not-found-code {
+    font-size: 4rem;
+  }
+  .not-found-title {
+    font-size: 1.5rem;
+  }
+  .not-found-message {
+    font-size: 1rem;
+  }
+}

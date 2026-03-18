@@ -1,0 +1,421 @@
+/* =========================
+   DASHBOARD STYLES (with Dark Mode)
+   (Nunito font from global fonts.css)
+========================= */
+
+/* Light theme variables (default) */
+:root {
+  --bg-page: #f5f7fa;
+  --bg-card: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --border-color: #eeeeee;
+  --accent-gold: #c89f72;
+  --accent-gold-light: rgba(200, 159, 114, 0.1);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.1);
+  --growth-up: #2ecc71;
+  --growth-down: #e74c3c;
+}
+
+/* Dark theme variables */
+.dark {
+  --bg-page: #1a1a2e;
+  --bg-card: #16213e;
+  --text-primary: #f0f0f0;
+  --text-secondary: #cccccc;
+  --text-muted: #888888;
+  --border-color: #2a2a4a;
+  --accent-gold: #e6b87e;
+  --accent-gold-light: rgba(230, 184, 126, 0.2);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.5);
+  --growth-up: #4cd964;
+  --growth-down: #ff5e3a;
+}
+
+.dashboard {
+  padding: 2rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: "Nunito", sans-serif;
+  background-color: var(--bg-page);
+  min-height: 100vh;
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin: 0;
+}
+
+.header-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header-controls select {
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+
+.theme-toggle {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--accent-gold);
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-gold-light);
+}
+
+/* ---------- Grid Layouts ---------- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.charts-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------- Premium Card ---------- */
+.premium-card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ---------- Chart Titles ---------- */
+.chart-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.3px;
+  border-left: 4px solid var(--accent-gold);
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ---------- Stat Cards with Icons ---------- */
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--accent-gold-light);
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.growth-up {
+  color: var(--growth-up);
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.growth-down {
+  color: var(--growth-down);
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+/* ---------- Insights Panel ---------- */
+.insights-panel {
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+}
+
+.insights-panel h3 {
+  color: var(--accent-gold);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.insights-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.insights-list span {
+  background: var(--accent-gold-light);
+  color: var(--text-primary);
+  padding: 0.4rem 1rem;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ---------- Activity Feed ---------- */
+.activity-feed {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.activity-item {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  align-items: center;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-action {
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.activity-table {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.activity-time {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.activity-user {
+  color: var(--text-primary);
+}
+
+/* ---------- Dashboard Table (Low Stock) ---------- */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th {
+  text-align: left;
+  padding: 0.75rem 0.5rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard-table td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.critical-stock {
+  color: var(--growth-down);
+  font-weight: 700;
+}
+
+.low-stock {
+  color: #f39c12;
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 1rem;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease forwards;
+}
+
+/* ---------- Loading Skeletons ---------- */
+.skeleton {
+  background: linear-gradient(90deg, var(--border-color) 25%, var(--text-muted) 50%, var(--border-color) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  height: 120px;
+  border-radius: 20px;
+}
+
+.skeleton-chart {
+  height: 280px;
+  background: linear-gradient(90deg, var(--border-color) 25%, var(--text-muted) 50%, var(--border-color) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 20px;
+}
+
+.skeleton-table {
+  height: 200px;
+  background: linear-gradient(90deg, var(--border-color) 25%, var(--text-muted) 50%, var(--border-color) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 20px;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ---------- Error State ---------- */
+.dashboard.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  color: var(--growth-down);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.retry-btn {
+  background: var(--accent-gold);
+  border: none;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.retry-btn:hover {
+  background: #b88a5a;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1.5rem 1rem;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .premium-card {
+    padding: 1rem;
+  }
+}
